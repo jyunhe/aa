@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Profile - Jun Han</title>
+    <title>Developer Profile - Xingye Su</title>
     <style>
         :root {
-            /* Dark pastel blue background */
-            --bg-color: #3b5266; 
-            /* Slightly darker blue for the cards/containers */
-            --card-bg: #2a3c4d;  
-            /* Crisp white text */
-            --text-main: #ffffff; 
-            /* Soft light blue-gray for secondary text */
-            --text-muted: #cbd5e1; 
-            /* Unique vibrant teal for primary buttons and accents */
-            --accent: #38ada9; 
-            /* Subtle borders */
-            --border: #576574; 
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+            --border: #334155;
         }
         body {
             font-family: 'Calibri', Tahoma, sans-serif;
@@ -32,4 +26,172 @@
             padding: 1rem 2rem;
             border-bottom: 2px solid var(--border);
             display: flex;
-            justify-content: space
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 { margin: 0; font-size: 1.5rem; color: var(--accent); }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active { color: var(--accent); }
+
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        
+        .section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+        .section-header {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .section-header::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Identity Section */
+        .identity { display: flex; align-items: center; gap: 1.5rem; }
+        .avatar {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #f59e0b, #3b82f6);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 1.5rem; font-weight: bold; color: #000;
+        }
+        .identity-info h2 { margin: 0 0 0.25rem 0; font-size: 1.8rem; }
+        .identity-info p.role { color: var(--accent); margin: 0 0 0.5rem 0; font-family: monospace; }
+        .identity-info p.location { color: var(--text-muted); margin: 0; font-size: 0.9rem; }
+
+        /* About Text */
+        .about-text { line-height: 1.6; color: #cbd5e1; font-size: 0.95rem; }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-card {
+            background-color: #0f172a;
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        .skill-card h4 { margin: 0 0 0.25rem 0; font-size: 0.9rem; color: #e2e8f0; }
+        .skill-card p { margin: 0; font-size: 0.8rem; color: var(--text-muted); font-family: monospace; }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1rem 0;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+        .contact-label { color: var(--text-muted); text-transform: uppercase; }
+        .contact-value { color: var(--accent); }
+
+        .footer-note {
+            font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;
+        }
+        .footer-note strong { color: #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>ABC Logistics</h1>
+        <div>
+            <a href="index.html">Dashboard</a>
+            <a href="about.html" class="active">Developer Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="section">
+            <div class="section-header">Identity</div>
+            <div class="identity">
+                <div class="avatar">XS</div>
+                <div class="identity-info">
+                    <h2>Xingye Su</h2>
+                    <p class="role">// Web Developer & MIS Student</p>
+                    <p class="location">📍 Burnaby, BC - Simon Fraser University</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">About Me</div>
+            <div class="about-text">
+                I am a Business Administration student at Simon Fraser University's Beedie School of Business. This project was completed as part of BUS 237, where I was introduced to how information systems and emerging technologies like AI can solve real business problems. Building this dashboard challenged me to think like both a project manager and a developer — translating business requirements into a working web application without writing every line of code from scratch. It gave me a practical understanding of AI-assisted development and how tools like localStorage, Chart.js, and prompt engineering can come together to deliver a functional product.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Skills</div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>🌐 HTML</h4>
+                    <p>Structure & Markup</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🎨 CSS</h4>
+                    <p>Styling & Layout</p>
+                </div>
+                <div class="skill-card">
+                    <h4>⚡ JAVASCRIPT</h4>
+                    <p>Client-side Logic</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🤖 AI-ASSISTED DEV</h4>
+                    <p>Prompt Engineering</p>
+                </div>
+                <div class="skill-card">
+                    <h4>📊 INFORMATION SYSTEMS</h4>
+                    <p>MIS & Business Analysis</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Contact</div>
+            <div class="contact-grid">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">xsa71@sfu.ca</div>
+                
+                <div class="contact-label">Student ID</div>
+                <div class="contact-value">301656947</div>
+                
+                <div class="contact-label">Course</div>
+                <div class="contact-value">BUS 237 - Introduction to MIS</div>
+                
+                <div class="contact-label">University</div>
+                <div class="contact-value">Simon Fraser University</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="footer-note">
+                <strong>About this project:</strong> The ABC Logistics Inventory Command Center was built using AI-assisted (vibe) coding as part of BUS 237 Assignment 2. It uses HTML, CSS, JavaScript, Chart.js, and localStorage to deliver a fully functional, client-side inventory management dashboard — no server or database required.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
